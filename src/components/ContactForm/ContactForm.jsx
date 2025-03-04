@@ -47,7 +47,7 @@ const ContactForm = ({ addContact }) => {
               className={s.formImput}
               id="number"
               name="number"
-              type="text"
+              type="tel"
             />
             <ErrorMessage
               name="number"
