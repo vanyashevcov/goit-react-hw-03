@@ -14,14 +14,12 @@ function App() {
 
   const [filter, setFilter] = useState("");
 
-  const filteredContactsName = userData.filter((contact) =>
-    contact.name.toLowerCase().includes(filter.toLowerCase())
+  const filteredContacts = userData.filter(
+    (contact) =>
+      contact.name.toLowerCase().includes(filter.toLowerCase()) ||
+      contact.number.toLowerCase().includes(filter.toLowerCase())
   );
   
-  const filteredContactsNumber = userData.filter((contact) =>
-    contact.number.toLowerCase().includes(filter.toLowerCase())
-  );
-
   const addContact = (contact) => {
     setUserData((prevContacts) => [...prevContacts, contact]);
   };
@@ -37,10 +35,7 @@ function App() {
       <h1>Phonebook</h1>
       <ContactForm addContact={addContact} />
       <SearchBox filter={filter} setFilter={setFilter} />
-      <ContactList
-        userData={(filteredContactsName, filteredContactsNumber)}
-        deleteContact={deleteContact}
-      />
+      <ContactList userData={filteredContacts} deleteContact={deleteContact} />
     </div>
   );
 }
