@@ -1,0 +1,13 @@
+.contactContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contactText {
+    font-size: 18px;
+}
+
+button {
+    background-color: #ededed;
+}

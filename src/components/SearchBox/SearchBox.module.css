@@ -1,0 +1,10 @@
+.searchText {
+    font-size: 22px;
+    margin: 0;
+}
+
+.searchBox {
+    padding: 10px 20px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
