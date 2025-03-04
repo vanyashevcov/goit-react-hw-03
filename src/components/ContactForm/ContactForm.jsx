@@ -35,7 +35,7 @@ const ContactForm = ({ addContact }) => {
         <div className={s.container}>
           <div className={s.labelContainer}>
             <label htmlFor="name">Name</label>
-            <Field className={s.formInput} id="name" name="name" type="text" />
+            <Field className={s.formImput} id="name" name="name" type="text" />
             <ErrorMessage
               name="name"
               component="div"
@@ -44,7 +44,7 @@ const ContactForm = ({ addContact }) => {
 
             <label htmlFor="number">Number</label>
             <Field
-              className={s.formInput}
+              className={s.formImput}
               id="number"
               name="number"
               type="text"
