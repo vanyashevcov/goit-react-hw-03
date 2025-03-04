@@ -21,7 +21,7 @@ function App() {
   );
   
   const addContact = (contact) => {
-    setUserData((prevContacts) => [...prevContacts, contact]);
+    setUserData((prev) => [...prev, contact]);
   };
 
   const deleteContact = (id) => {
