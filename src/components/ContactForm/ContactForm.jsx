@@ -15,6 +15,7 @@ const ContactForm = ({ addContact }) => {
       .max(15, "Максимум 15 символів")
       .required("Це поле обов'язкове"),
   });
+
   return (
     <Formik
       initialValues={{ name: "", number: "" }}
@@ -27,24 +28,32 @@ const ContactForm = ({ addContact }) => {
         };
 
         addContact(newContact);
-        resetForm();
+        resetForm(); 
       }}
     >
       <Form>
         <div className={s.container}>
           <div className={s.labelContainer}>
             <label htmlFor="name">Name</label>
-            <Field className={s.formImput} id="name" name="name" type="text" />
-            <ErrorMessage name="name" component="div" />
+            <Field className={s.formInput} id="name" name="name" type="text" />
+            <ErrorMessage
+              name="name"
+              component="div"
+              className={s.errorMessage}
+            />
 
             <label htmlFor="number">Number</label>
             <Field
-              className={s.formImput}
+              className={s.formInput}
               id="number"
               name="number"
               type="text"
             />
-            <ErrorMessage name="number" component="div" />
+            <ErrorMessage
+              name="number"
+              component="div"
+              className={s.errorMessage}
+            />
           </div>
           <button type="submit">Add Contact</button>
         </div>
