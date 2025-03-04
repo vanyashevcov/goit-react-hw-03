@@ -7,13 +7,13 @@ import s from "./ContactForm.module.css";
 const ContactForm = ({ addContact }) => {
   const validationSchema = Yup.object({
     name: Yup.string()
-      .min(3, "Мінімум 3 символи")
-      .max(50, "Максимум 50 символів")
-      .required("Це поле обов'язкове"),
+      .min(3, "Minimum 3 characters")
+      .max(50, "Maximum 50 characters")
+      .required("This field is required"),
     number: Yup.string()
-      .min(7, "Мінімум 7 символів")
-      .max(15, "Максимум 15 символів")
-      .required("Це поле обов'язкове"),
+      .min(7, "Minimum 7 characters")
+      .max(15, "Maximum 15 characters")
+      .required("This field is required"),
   });
 
   return (
